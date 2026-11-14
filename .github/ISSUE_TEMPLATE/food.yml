@@ -1,0 +1,43 @@
+name: Add food
+description: Put something in the shared freezer inventory.
+title: "[Food] "
+body:
+  - type: markdown
+    attributes:
+      value: "Replace the title above with the food name, keeping [Food] at the beginning. Update this entry as you use portions, and close it when it is gone."
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Seafood
+        - Meat
+        - Poultry
+        - Leftovers
+        - Vegetables
+        - Bread & Baking
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: quantity
+    attributes:
+      label: Quantity
+      placeholder: 2 portions, 1 lb, or 3 containers
+    validations:
+      required: true
+  - type: input
+    id: location
+    attributes:
+      label: Freezer location
+      placeholder: Top basket, bottom left, or door shelf
+  - type: input
+    id: frozen
+    attributes:
+      label: Date frozen
+      placeholder: YYYY-MM-DD (leave blank if unknown)
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      placeholder: Ingredients, reheating notes, or anything useful
